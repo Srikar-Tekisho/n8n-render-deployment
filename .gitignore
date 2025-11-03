@@ -1,0 +1,14 @@
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# n8n data (if running locally)
+.n8n/

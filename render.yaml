@@ -6,15 +6,15 @@ services:
     dockerfilePath: ./Dockerfile
     envVars:
       - key: N8N_ENCRYPTION_KEY
-        value: your_secure_random_key
+        generateValue: true
       - key: WEBHOOK_URL
-        value: https://your-render-subdomain.onrender.com/
+        value: ${RENDER_EXTERNAL_URL}
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
         value: 5678
       - key: N8N_PROTOCOL
-        value: http
+        value: http  # Render handles HTTPS/TLS termination at the load balancer
       - key: EXECUTIONS_DATA_SAVE_ON_ERROR
         value: all
       - key: EXECUTIONS_DATA_SAVE_ON_SUCCESS
